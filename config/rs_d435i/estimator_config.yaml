@@ -8,13 +8,13 @@ use_stereo: true # NEED TO USE STEREO! OTHERWISE CAN'T RECOVER SCALE!!!!!! DEGEN
 max_cameras: 2 # NEED TO USE STEREO! OTHERWISE CAN'T RECOVER SCALE!!!!!! DEGENERATE MOTION!!!
 
 calib_cam_extrinsics: false # disable since this is a degenerate motion
-calib_cam_intrinsics: true
+calib_cam_intrinsics: false
 calib_cam_timeoffset: false # disable since this is a degenerate motion
 calib_imu_intrinsics: false
 calib_imu_g_sensitivity: false
 
 max_clones: 11 # how many clones in the sliding window
-max_slam: 50 # number of features in our state vector
+max_slam: 0 # number of features in our state vector
 max_slam_in_update: 25 # update can be split into sequential updates of batches, how many in a batch
 max_msckf_in_update: 50 # how many MSCKF features to use in the update
 dt_slam_delay: 1 # delay before initializing (helps with stability from bad initialization...)
@@ -85,7 +85,7 @@ grid_y: 5
 min_px_dist: 15
 knn_ratio: 0.70
 track_frequency: 31.0
-downsample_cameras: false # will downsample image in half if true
+downsample_cameras: true # will downsample image in half if true
 num_opencv_threads: 4 # -1: auto, 0-1: serial, >1: number of threads
 histogram_method: "HISTOGRAM" # NONE, HISTOGRAM, CLAHE
 
@@ -112,6 +112,9 @@ up_aruco_chi2_multipler: 1
 
 # masks for our images
 use_mask: false
+
+pyram_levels: 3
+patch_size: 15
 
 # imu and camera spacial-temporal
 # imu config should also have the correct noise values
