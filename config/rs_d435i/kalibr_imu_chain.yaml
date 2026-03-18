@@ -15,13 +15,13 @@ imu0:
   # Inflated values (to account for unmodelled effects)
   #  - white noise multiplied by 2
   #  - bias random walk multiplied by 10
-  accelerometer_noise_density: 0.0015250209869349138
-  accelerometer_random_walk: 5.9272078086425066e-05
-  gyroscope_noise_density: 0.00023003597359636796
-  gyroscope_random_walk: 1.6225910358399872e-06
+  accelerometer_noise_density: 0.015250209869349138
+  accelerometer_random_walk: 5.9272078086425066e-04
+  gyroscope_noise_density: 0.0023003597359636796
+  gyroscope_random_walk: 1.6225910358399872e-05
   rostopic: /camera/camera/imu
+  update_rate: 400
   time_offset: 0.0
-  update_rate: 200
   # three different modes supported:
   # "calibrated" (same as "kalibr"), "kalibr", "rpng"
   model: "kalibr"
