@@ -14,17 +14,10 @@ calib_imu_intrinsics: false
 calib_imu_g_sensitivity: false
 
 max_clones: 11 # how many clones in the sliding window
-<<<<<<< Updated upstream
-max_slam: 25 # number of features in our state vector
-max_slam_in_update: 25 # update can be split into sequential updates of batches, how many in a batch
-max_msckf_in_update: 50 # how many MSCKF features to use in the update
-dt_slam_delay: 1 # delay before initializing (helps with stability from bad initialization...)
-=======
 max_slam: 50 # number of features in our state vector
 max_slam_in_update: 30 # update can be split into sequential updates of batches, how many in a batch
 max_msckf_in_update: 40 # how many MSCKF features to use in the update
-dt_slam_delay: 2 # delay before initializing (helps with stability from bad initialization...)
->>>>>>> Stashed changes
+dt_slam_delay: 2 # delay before initializing (helps with stability from bad initialization...g
 
 gravity_mag: 9.81 # magnitude of gravity in this location
 
@@ -87,17 +80,6 @@ filepath_gt: "/tmp/ov_groundtruth.txt"
 # our front-end feature tracking parameters
 # we have a KLT and descriptor based (KLT is better implemented...)
 use_klt: true
-<<<<<<< Updated upstream
-num_pts: 150
-fast_threshold: 30
-grid_x: 5
-grid_y: 5
-min_px_dist: 10
-knn_ratio: 0.70
-track_frequency: 31.0
-downsample_cameras: true # will downsample image in half if true
-num_opencv_threads: 4 # -1: auto, 0-1: serial, >1: number of threads
-=======
 num_pts: 100
 fast_threshold: 15
 grid_x: 5
@@ -107,7 +89,6 @@ knn_ratio: 0.70
 track_frequency: 30.0
 downsample_cameras: false # will downsample image in half if true
 num_opencv_threads: 8 # -1: auto, 0-1: serial, >1: number of threads
->>>>>>> Stashed changes
 histogram_method: "HISTOGRAM" # NONE, HISTOGRAM, CLAHE
 
 fi_min_dist: 0.1
