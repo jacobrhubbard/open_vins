@@ -80,8 +80,8 @@ filepath_gt: "/tmp/ov_groundtruth.txt"
 # our front-end feature tracking parameters
 # we have a KLT and descriptor based (KLT is better implemented...)
 use_klt: true
-num_pts: 250
-fast_threshold: 15
+num_pts: 200
+fast_threshold: 20
 grid_x: 5
 grid_y: 5
 min_px_dist: 15
@@ -91,11 +91,11 @@ downsample_cameras: false # will downsample image in half if true
 num_opencv_threads: 8 # -1: auto, 0-1: serial, >1: number of threads
 histogram_method: "HISTOGRAM" # NONE, HISTOGRAM, CLAHE
 
-fi_max_dist: 60
-fi_max_baseline: 40
+  #fi_max_dist: 60
+  #fi_max_baseline: 40
   #fi_max_cond_number: 25000
-fi_refine_features: true
-fi_max_runs: 5
+  #fi_refine_features: true
+  #fi_max_runs: 5
 
 # aruco tag tracker for the system
 # DICT_6X6_1000 from https://chev.me/arucogen/
@@ -107,10 +107,10 @@ downsize_aruco: true
 # ==================================================================
 
 # camera noises and chi-squared threshold multipliers
-up_msckf_sigma_px: 1.5
-up_msckf_chi2_multipler: 2
-up_slam_sigma_px: 1.5
-up_slam_chi2_multipler: 2
+up_msckf_sigma_px: 1.2
+up_msckf_chi2_multipler: 1
+up_slam_sigma_px: 1.2
+up_slam_chi2_multipler: 1
 up_aruco_sigma_px: 1
 up_aruco_chi2_multipler: 1
 
