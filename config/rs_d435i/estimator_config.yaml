@@ -14,8 +14,8 @@ calib_imu_intrinsics: true
 calib_imu_g_sensitivity: true
 
 max_clones: 11 # how many clones in the sliding window
-max_slam: 50 # number of features in our state vector
-max_slam_in_update: 50 # update can be split into sequential updates of batches, how many in a batch
+max_slam: 60 # number of features in our state vector
+max_slam_in_update: 25 # update can be split into sequential updates of batches, how many in a batch
 max_msckf_in_update: 50 # how many MSCKF features to use in the update
 dt_slam_delay: 2 # delay before initializing (helps with stability from bad initialization...g
 
@@ -80,11 +80,11 @@ filepath_gt: "/tmp/ov_groundtruth.txt"
 # our front-end feature tracking parameters
 # we have a KLT and descriptor based (KLT is better implemented...)
 use_klt: true
-num_pts: 200
-fast_threshold: 20
+num_pts: 250
+fast_threshold: 15
 grid_x: 5
 grid_y: 5
-min_px_dist: 15
+min_px_dist: 10
 knn_ratio: 0.70
 track_frequency: 30.0
 downsample_cameras: false # will downsample image in half if true
