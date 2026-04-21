@@ -80,11 +80,11 @@ filepath_gt: "/tmp/ov_groundtruth.txt"
 # our front-end feature tracking parameters
 # we have a KLT and descriptor based (KLT is better implemented...)
 use_klt: true
-num_pts: 200
+num_pts: 250
 fast_threshold: 15
 grid_x: 5
 grid_y: 5
-min_px_dist: 25
+min_px_dist: 20
 knn_ratio: 0.70
 track_frequency: 31.0
 downsample_cameras: false # will downsample image in half if true
@@ -110,7 +110,7 @@ downsize_aruco: true
 up_msckf_sigma_px: 1.0
 up_msckf_chi2_multipler: 5.0
 up_slam_sigma_px: 1.4
-up_slam_chi2_multipler: 10.0
+up_slam_chi2_multipler: 6.0
 up_aruco_sigma_px: 1
 up_aruco_chi2_multipler: 1
 
